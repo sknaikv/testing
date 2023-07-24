@@ -1011,6 +1011,10 @@
       padding: 10px;
     }
 
+    .navbar{
+      /* transition: all 0.5s; */
+    }
+
 
     .left-nav {
       margin: 10px;
@@ -1018,10 +1022,12 @@
       font-size: 14px;
       position: relative;
       bottom: 15%;
+      transition: none;
     }
 
     .hamburger {
       display: block;
+      margin: 0px -40px;
     }
 
     .hamburger.active .line:nth-child(2){
@@ -1049,6 +1055,8 @@
       background-color: white;
       transition: all 0.5s;
       position: fixed;
+      width: 100%;
+      margin: 13px 0px;
     }
 
     .center-nav {
@@ -1079,11 +1087,13 @@
       right: -9px;
       position: relative;
       padding: 10px;
+      transition: none;
     }
 
     .left-nav.active{
       position: relative;
       top: 5%; 
+      transition: none;
     }
 
 
