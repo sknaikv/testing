@@ -262,7 +262,7 @@ function checkdegree(input) {
         next2.onclick = function () {
             form2.style.left = "-50%";
             form3.style.left = "50%"
-            progress.style.width = "28%"
+            progress.style.width = "50%"
             window.scrollTo(100, 100)
         }
     } else {
@@ -348,4 +348,5 @@ hamburger.addEventListener('click',()=>{
     centernav.classList.toggle('active');
     leftnav.classList.toggle('active');
     listnames.classList.toggle('active');
+    navbar.classList.toggle('hide');
 })
