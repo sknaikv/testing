@@ -1052,11 +1052,12 @@
       display: flex;
       align-items: baseline;
       font-size: 12px;
-      background-color: white;
+      background-color: #071b5e;
       transition: all 0.5s;
       position: fixed;
       width: 100%;
-      margin: 13px 0px;
+      right: 0;
+      color: white;
     }
 
     .center-nav {
@@ -1071,6 +1072,7 @@
       display: grid;
       position: relative;
       top: 15%;
+      color: white;
     }
 
     .center-nav>ul.active {
@@ -1088,12 +1090,21 @@
       position: relative;
       padding: 10px;
       transition: none;
+      color: white;
     }
 
     .left-nav.active{
       position: relative;
       top: 5%; 
       transition: none;
+    }
+
+    .list-names{
+      color: white;
+    }
+
+    .list-names.active{
+      color: white;
     }
 
 
