@@ -854,7 +854,7 @@
   .form-control.error textarea {
     border-color: var(--error-color);
   }
-
+  
 
   textarea {
     background-color: transparent;
@@ -870,6 +870,7 @@
     resize: none;
   }
 
+  
 
 
   .step-row {
@@ -1039,7 +1040,19 @@
 
     body{
       /* margin: 10px; */
-      padding: 10px;
+      /* padding: 10px; */
+    }
+
+    #form3>ul{
+      display: flex;
+      flex-direction: column;
+    }
+    .form-content{
+      height: 390vh;
+    }
+
+    #form4{
+      width: 100%;
     }
 
     .navbar{
@@ -1149,7 +1162,9 @@
       color: white;
     }
 
-
+    .left-nav>h3{
+      display: none;
+    }
 
 
   }
@@ -1178,13 +1193,72 @@
 
  @media screen and (min-width:200px) and (max-width:550px){
   label{
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   small{
     font-size: 0.6rem;
   }
+
+  .main>h1{
+    font-size: 1rem;
+    position: relative;
+    top: 2rem;
+    font-weight: 800;
+    right: 5.5rem;
+   }
+   .step-row{
+    display: none;
+   }
+   .process{
+    display: none;
+   }
+   input{
+    font-size: 10px;
+   }
+   #form1,#form2,#form4,#form5,#form6{
+    /* height: max-content; */
+   }
+
+   #form6{
+    height: 70vh;
+   }
+
+   #form5{
+    height: 80vh;
+   }
+
+   #form4{
+    height: 300vh;
+   }
+
+   #form3{
+    height: 260vh;
+   }
+
+   #form2{
+    height: 60vh;
+   }
+
+   #form1{
+    height: 130vh;
+   }
+
+   .btn-next{
+    position: relative;
+    bottom: 20px;
+   }
+
+   /* .form-content{
+    height: 155vh;
+   } */
+
+   .btn-next>a>button{
+    font-size: 12px;
+    padding: 5px;
+   }
  }
 
+ 
 
   /* 
   @media screen and (min-width:1264px) and (max-width:1000px){

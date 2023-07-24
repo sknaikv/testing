@@ -26,7 +26,9 @@ const ref = document.getElementById('reference')
 
 
 
-var form6 = document.getElementById("form6")
+const form6 = document.getElementById("form6")
+const tnc = document.getElementById('t&C')
+const fieldset = document.getElementById('fieldset')
 
 // var form1 = document.getElementById("form1")
 var form3 = document.getElementById("form3")
@@ -119,7 +121,7 @@ function checkRequired(inputArr) {
     inputArr.forEach(function (input) {
         if (input.value.trim() === '') {
             showerror(input, `${getfieldName(input)} is Required`);
-        }else{
+        } else {
             next1.onclick = function () {
                 form1.style.left = "-50%";
                 form2.style.left = "50%"
@@ -146,7 +148,7 @@ function checkLength(input, min, max) {
             window.scrollTo(100, 100)
         }
         return true;
-        
+
     }
 }
 
@@ -271,7 +273,7 @@ function checkdegree(input) {
 }
 
 
-form3.addEventListener('submit',function(e){
+form3.addEventListener('submit', function (e) {
     e.preventDefault();
     next3.onclick = function () {
         form3.style.left = "-50%";
@@ -282,7 +284,7 @@ form3.addEventListener('submit',function(e){
 })
 
 
-form4.addEventListener('submit',function(e){
+form4.addEventListener('submit', function (e) {
     e.preventDefault();
     next4.onclick = function () {
         form4.style.left = "-50%"
@@ -293,10 +295,10 @@ form4.addEventListener('submit',function(e){
 })
 
 
-form5.addEventListener('submit',function(e){
+form5.addEventListener('submit', function (e) {
     e.preventDefault();
     checkRequired([ref])
-    checkLengthref(ref,8 ,100)
+    checkLengthref(ref, 8, 100)
     checkref(ref)
 })
 
@@ -331,6 +333,65 @@ function checkLengthref(input, min, max) {
     }
 }
 
+form6.addEventListener('submit', function (e) {
+    e.preventDefault();
+    checkRequired([tnc]);
+    checktnc(tnc);
+
+    function checktnc(input) {
+
+        tnc.addEventListener('change', () => {
+            e.preventDefault();
+            checktnc(input)
+            if (input.checked) {
+                fieldset.style.borderColor = 'green';
+                submit.onclick = function () {
+                    setTimeout(function () {
+                        alert("submitted successfully")
+                        location.reload();
+                    })
+                }
+            } else if (!input.checked) {
+                // showerror(input,'Please agree to the Terms & Conditions')
+                fieldset.style.borderColor = '#BC383E';
+            }
+
+
+        })
+        fieldset.style.borderColor = '#BC383E';
+    }
+
+    // location.reload();
+})
+
+
+
+// function checkRequired(inputArr) {
+//     inputArr.forEach(function (input) {
+//         if (input.value.trim() === '') {
+//             showerror(input, `${getfieldName(input)} is Required`);
+//         }else{
+// submit.onclick = function(){
+//     setTimeout(function(){
+//         alert("submitted successfully")
+//         location.reload();
+//     })
+// }
+//         }
+//     });
+// }
+
+
+// form6.addEventListener('submit',function(){
+//     e.preventDefault();
+//     submit.onclick = function(){
+//         setTimeout(function(){
+//             alert("submitted successfully")
+//             location.reload();
+//         })
+//     }
+// })
+
 
 //hamburger
 
@@ -341,12 +402,11 @@ const centernav = document.querySelector('.center-nav');
 const leftnav = document.querySelector('.left-nav');
 const listnames = document.querySelector('.list-names');
 
-hamburger.addEventListener('click',()=>{
+hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navmenu.classList.toggle('active');
     navbar.classList.toggle('active');
     centernav.classList.toggle('active');
     leftnav.classList.toggle('active');
     listnames.classList.toggle('active');
-    navbar.classList.toggle('hide');
 })

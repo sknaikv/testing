@@ -18,7 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Cedarville+Cursive&family=Comfortaa:wght@300&family=Hind:wght@300&family=IBM+Plex+Sans&family=Josefin+Sans:wght@100&family=Poppins:wght@200;500&family=Roboto&family=Roboto+Slab:wght@300;400&family=Satisfy&family=Ubuntu:wght@300;400&family=Varela+Round&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- <script src="./index.js" defer></script> -->
     <!-- <script src="./script2.js" defer></script> -->
     <script src="script3.js" defer></script>
@@ -168,26 +168,26 @@
 
                 <div class="form-control">
                     <label style="padding-top: 45px;" for="fname">First Name <span>*</span><small></small></label>
-                    <input class="fname" type="text" name="f_name" id="firstname" placeholder="First Name" >
-                     
+                    <input class="fname" type="text" name="f_name" id="firstname" placeholder="First Name">
+
                 </div>
 
                 <div class="form-control">
                     <label for="lname">Last Name<span>*</span><small></small></label>
                     <input type="text" placeholder="Last Name" id="lastname" name="l_name">
-                        
+
                 </div>
 
                 <div class="form-control">
                     <label for="contact">Contact Number<span>*</span><small></small></label>
                     <input type="text" placeholder="Contact Number" id="contact">
-                            
+
                 </div>
 
                 <div class="form-control">
                     <label for="Email">Email<span>*</span><small></small></label>
                     <input type="email" name="" id="email" placeholder="Email">
-                        
+
                 </div>
 
                 <div class="form-control">
@@ -199,13 +199,13 @@
                 <div class="form-control">
                     <label for="country">Country<span>*</span><small></small></label>
                     <input type="text" placeholder="Country" id="country">
-                        
+
                 </div>
 
                 <div class="form-control">
                     <label for="city">City<span>*</span><small></small></label>
                     <input type="text" name="" id="city" placeholder="City">
-                        
+
                 </div>
 
                 <div class="form-control">
@@ -230,15 +230,16 @@
 
             <form action="/" id="form2" method="post" name="form_2">
                 <h3 style="padding: 0px 0px 10px 0px; border-bottom: 2px solid #0a288b8a;">Educational Details</h3>
-                
+
                 <div class="form-control">
-                    <label style="padding-top: 45px;" for="degree">Current Degree & Branch<span>*</span><small></small></label>
-                    <input type="text" placeholder="Your Recent Degree & Branch"  id="degree">
+                    <label style="padding-top: 45px;" for="degree">Current Degree &
+                        Branch<span>*</span><small></small></label>
+                    <input type="text" placeholder="Your Recent Degree & Branch" id="degree">
                 </div>
 
                 <div class="form-control">
                     <label for="passed">Passed Out<span>*</span><small></small></label>
-                    <input type="date" placeholder="Passed Out Year"  id="passyear">
+                    <input type="date" placeholder="Passed Out Year" id="passyear">
                 </div>
 
                 <!-- <h3>Personal Details</h3>
@@ -512,7 +513,8 @@
                         style="color: #BC383E;">*</span></h4>
                 <input type="date" name="date" required>
 
-                <h4 style=" padding: 0px 0px 0px 10px; position: relative; top: 1.5%;">Do you Have Laptop/Desktop with
+                <h4 style=" padding: 0px 0px 0px 10px; position: relative;" class="laptop">Do you Have Laptop/Desktop
+                    with
                     Internet connectivity to work?<span style="color: #BC383E;">*</span></h4>
 
                 <li style="padding:20px 0px 0px 15px">
@@ -530,13 +532,13 @@
                 </div>
             </form>
 
-            <form action="" id="form5" name="form_5" method="post">
+            <form action="/" id="form5" name="form_5" method="post">
 
 
                 <h4>How You know about the Internship in KGE Technologies Pvt Ltd <span style="color: #BC383E;">*</span>
                 </h4>
                 <div class="form-control">
-                    <textarea name="ref" id="reference" cols="5" rows="5" ></textarea>
+                    <textarea name="ref" id="reference" cols="5" rows="5"></textarea>
                     <small></small>
                 </div>
 
@@ -550,21 +552,27 @@
                 </div>
             </form>
 
-            <form action="" id="form6" name="form_6" method="post">
+            <form action="/" id="form6" name="form_6" method="post">
 
-                <fieldset>
-                    <legend>Terms and Conditions <span style="color: #BC383E;">*</span></legend>
-                    <p>I Agree, KGE Technologies Pvt Ltd to contact me via Email, Call, SMS, Whatsapp to discuss on my
-                        Form Submission for Internship</p>
+                <div class="form-control">
 
-                    <ul style="display: flex; align-items: center;padding: 10px 0px;">
-                        <input type="checkbox" name="tnc" id="tncid">
-                        <p style="margin-left: 10px;">I accept the Terms and Conditions.</p>
-                    </ul>
-                </fieldset>
+                    <fieldset id="fieldset">
+                        <legend>Terms and Conditions <span style="color: #BC383E;">*</span></legend>
+                        <p>I Agree, KGE Technologies Pvt Ltd to contact me via Email, Call, SMS, Whatsapp to discuss on
+                            my
+                            Form Submission for Internship</p>
+
+                        <ul style="display: flex; align-items: center;padding: 10px 0px;">
+                            <input type="checkbox" name="tnc" id="t&C">
+                            <p style="margin-left: 10px;">I accept the Terms and Conditions.</p>
+                        </ul>
+                        <small></small>
+                    </fieldset>
+                </div>
+
                 <p style="margin-top: 20px;">Recaptcha <span style="color: #BC383E;">*</span></p>
-                <div style="margin-top: 20px; border-radius: 6px;" class="g-recaptcha"
-                    data-sitekey="6LeQbEEnAAAAAMaa64aQPePm_7BBb6uRI3wqGS8f"><input type="radio"></div>
+                <div class="g-recaptcha"
+                    data-sitekey="6LeQbEEnAAAAAMaa64aQPePm_7BBb6uRI3wqGS8f"></div>
 
                 <div class="btn-next">
                     <a href="#form5"><button type="button" id="back5">Back</button></a>
