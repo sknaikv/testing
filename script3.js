@@ -12,6 +12,7 @@ const whatsappnumber = document.getElementById('whatsappnumber');
 const male = document.getElementById('male');
 const female = document.getElementById('female');
 const other = document.getElementById('other');
+const gender = document.getElementById('gender');
 
 
 //form2
@@ -340,6 +341,25 @@ form6.addEventListener('submit', function (e) {
 
     function checktnc(input) {
 
+        if (input.checked) {
+            fieldset.style.borderColor = 'green';
+            submit.onclick = function () {
+                setTimeout(function () {
+                    alert("submitted successfully")
+                    location.reload();
+                })
+            }
+        } else if (!input.checked) {
+            submit.onclick = function(){
+                e.preventDefault();
+                fieldset.style.borderColor = '#BC383E';
+            }
+            fieldset.style.borderColor = '#BC383E';
+        }else{
+            e.preventDefault();
+            fieldset.style.borderColor = '#BC383E';
+        }
+
         tnc.addEventListener('change', () => {
             e.preventDefault();
             checktnc(input)
@@ -352,13 +372,19 @@ form6.addEventListener('submit', function (e) {
                     })
                 }
             } else if (!input.checked) {
-                // showerror(input,'Please agree to the Terms & Conditions')
+                submit.onclick = function(){
+                    e.preventDefault();
+                    fieldset.style.borderColor = '#BC383E';
+                }
+                fieldset.style.borderColor = '#BC383E';
+            }else{
+                e.preventDefault();
                 fieldset.style.borderColor = '#BC383E';
             }
 
 
         })
-        fieldset.style.borderColor = '#BC383E';
+        // fieldset.style.borderColor = '#BC383E';
     }
 
     // location.reload();
