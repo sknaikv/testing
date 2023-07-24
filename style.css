@@ -549,7 +549,7 @@
     margin-top: 20px;
     padding: 15px 20px;
     width: 90%;
-    height: 78%;
+    height: 1100px;
     border-radius: 5px;
     /* border: 2px solid rgba(80, 65, 165, 0.479); */
     box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
@@ -963,6 +963,6 @@
 
   @media (1460px <= width <= 1495px){
     .step-row>.step-col>small{
-      font-size: 14px;
+      font-size: 12px;
     }
   }
