@@ -25,6 +25,9 @@
 </head>
 
 <body>
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
 
     <nav>
         <div class="navbar">
@@ -571,8 +574,7 @@
                 </div>
 
                 <p style="margin-top: 20px;">Recaptcha <span style="color: #BC383E;">*</span></p>
-                <div class="g-recaptcha"
-                    data-sitekey="6LeQbEEnAAAAAMaa64aQPePm_7BBb6uRI3wqGS8f"></div>
+                <div class="g-recaptcha" data-sitekey="6LeQbEEnAAAAAMaa64aQPePm_7BBb6uRI3wqGS8f"></div>
 
                 <div class="btn-next">
                     <a href="#form5"><button type="button" id="back5">Back</button></a>
@@ -605,6 +607,17 @@
     <footer>
         <p>Copyright © 2021 KGE Technologies</p>
     </footer>
+
+    <script>
+        var loader = document.getElementById('loader-container');
+        window.addEventListener('load', () => {
+            loader.style.display = 'none';
+        })
+    </script>
+
+   
+
+
 </body>
 
 </html>
