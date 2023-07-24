@@ -105,6 +105,7 @@ function checkEmail(input) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (re.test(input.value.trim())) {
         showsuccess(input);
+        return true;
     } else {
         showerror(input, 'Email is not Valid');
         return false;
@@ -118,6 +119,14 @@ function checkRequired(inputArr) {
     inputArr.forEach(function (input) {
         if (input.value.trim() === '') {
             showerror(input, `${getfieldName(input)} is Required`);
+        }else{
+            next1.onclick = function () {
+                form1.style.left = "-50%";
+                form2.style.left = "50%"
+                progress.style.width = "28%"
+                window.scrollTo(100, 100)
+            }
+            return true;
         }
     });
 }
@@ -136,6 +145,8 @@ function checkLength(input, min, max) {
             progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
+        return true;
+        
     }
 }
 
@@ -150,6 +161,7 @@ function checkNumber(input) {
             progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
+        return true;
     } else {
         showerror(input, 'Contact Number is not Valid');
     }
@@ -166,6 +178,7 @@ function checkWANumber(input) {
             progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
+        return true;
     } else {
         showerror(input, 'WhatsApp Number is not Valid');
     }
@@ -182,6 +195,7 @@ function checkcountry(input) {
             progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
+        return true;
     } else {
         showerror(input, 'Country is not Valid');
     }
@@ -197,6 +211,7 @@ function checkcity(input) {
             progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
+        return true;
     } else {
         showerror(input, 'City is not Valid');
     }
@@ -224,8 +239,8 @@ form1.addEventListener('submit', function (e) {
 
 
 
-
 })
+
 
 
 //form2 event listener
@@ -317,3 +332,20 @@ function checkLengthref(input, min, max) {
 }
 
 
+//hamburger
+
+const hamburger = document.querySelector('.hamburger');
+const navmenu = document.querySelector('.center-nav>ul');
+const navbar = document.querySelector('.navbar');
+const centernav = document.querySelector('.center-nav');
+const leftnav = document.querySelector('.left-nav');
+const listnames = document.querySelector('.list-names');
+
+hamburger.addEventListener('click',()=>{
+    hamburger.classList.toggle('active');
+    navmenu.classList.toggle('active');
+    navbar.classList.toggle('active');
+    centernav.classList.toggle('active');
+    leftnav.classList.toggle('active');
+    listnames.classList.toggle('active');
+})
