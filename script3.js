@@ -18,7 +18,7 @@ const gender = document.getElementById('gender');
 //form2
 const form2 = document.getElementById("form2");
 const degree = document.getElementById('degree');
-const passyear = document.getElementById('passyear');
+const passdate = document.getElementById('passdate');
 
 
 //form5
@@ -109,9 +109,10 @@ function checkEmail(input) {
     if (re.test(input.value.trim())) {
         showsuccess(input);
         return true;
-    } else {
-        showerror(input, 'Email is not Valid');
-        return false;
+    } else if(!re.test(input.value.trim())) {
+        showerror(input, 'Email is required');
+    }else{
+        showerror(input, 'Email is required')
     }
 }
 
@@ -137,9 +138,9 @@ function checkRequired(inputArr) {
 //check input length
 function checkLength(input, min, max) {
     if (input.value.length < min) {
-        showerror(input, `${getfieldName(input)} must be atleast  ${min} characters`);
+        showerror(input, `${getfieldName(input)} is required`);
     } else if (input.value.length > max) {
-        showerror(input, `${getfieldName(input)} must be less than ${max} characters`);
+        showerror(input, `${getfieldName(input)} is required`);
     } else {
         showsuccess(input);
         next1.onclick = function () {
@@ -166,7 +167,7 @@ function checkNumber(input) {
         }
         return true;
     } else {
-        showerror(input, 'Contact Number is not Valid');
+        showerror(input, 'Contact Number is required');
     }
 
 }
@@ -183,7 +184,7 @@ function checkWANumber(input) {
         }
         return true;
     } else {
-        showerror(input, 'WhatsApp Number is not Valid');
+        showerror(input, 'WhatsApp Number is  required');
     }
 
 }
@@ -200,7 +201,7 @@ function checkcountry(input) {
         }
         return true;
     } else {
-        showerror(input, 'Country is not Valid');
+        showerror(input, 'Country is required');
     }
 }
 
@@ -216,7 +217,7 @@ function checkcity(input) {
         }
         return true;
     } else {
-        showerror(input, 'City is not Valid');
+        showerror(input, 'City is required');
     }
 }
 
@@ -242,15 +243,15 @@ form1.addEventListener('submit', function (e) {
 
     
 
-
     //email reinitiate
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (re.test(input.value.trim())) {
         showsuccess(input);
         return true;
-    } else {
+    } else if(!re.test(input.value.trim())) {
         showerror(input, 'Email is not Valid');
-        return false;
+    }else{
+        showerror(input, 'Email is required')
     }
 
 
@@ -263,7 +264,7 @@ form1.addEventListener('submit', function (e) {
 
 form2.addEventListener('submit', function (e) {
     e.preventDefault();
-    checkRequired([degree, passyear]);
+    checkRequired([degree, passdate]);
     checkdegree(degree)
     // checkdate(passyear);
 
@@ -282,7 +283,7 @@ function checkdegree(input) {
             window.scrollTo(100, 100)
         }
     } else {
-        showerror(input, 'Degree is not Valid');
+        showerror(input, 'Degree is required');
     }
 }
 
@@ -327,7 +328,7 @@ function checkref(input) {
             window.scrollTo(100, 100)
         }
     } else {
-        showerror(input, 'Enter Valid Input');
+        showerror(input, 'Reference is required');
     }
 }
 
