@@ -405,6 +405,18 @@ form6.addEventListener('submit', function (e) {
 })
 
 
+//topview
+
+const topview = document.querySelector(".topview");
+window.addEventListener("scroll",()=>{
+    if(window.scrollY > 300){
+        topview.classList.add("active");
+    }else{
+        topview.classList.remove("active");
+    }
+})
+
+
 
 // function checkRequired(inputArr) {
 //     inputArr.forEach(function (input) {

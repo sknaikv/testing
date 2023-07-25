@@ -26,6 +26,33 @@
   }
 
 
+  .topview{
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    top: 82%;
+    /* float: right; */
+    transform: translate(100%);
+    left: 87%;
+    transition: all 0.5s;
+    /* display: none; */
+    opacity: 0;
+  }
+
+  .topview.active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .ri-arrow-up-line{
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    color: #071b5e;
+    font-weight: 800;
+  }
+
 
   /* loader */
 
