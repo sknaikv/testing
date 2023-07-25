@@ -189,20 +189,8 @@ function checkWANumber(input) {
 
 }
 
-function checkcountry(input) {
-    var letters = /^[A-Za-z]+$/;
-    if (input.value.match(letters)) {
-        showsuccess(input);
-        next1.onclick = function () {
-            form1.style.left = "-50%";
-            form2.style.left = "50%"
-            progress.style.width = "28%"
-            window.scrollTo(100, 100)
-        }
-        return true;
-    } else {
-        showerror(input, 'Country is required');
-    }
+function checkcountry() {
+    
 }
 
 function checkcity(input) {
@@ -307,8 +295,19 @@ form4.addEventListener('submit', function (e) {
         progress.style.width = "76.5%"
         window.scrollTo(100, 100)
     }
+
 })
 
+function enabledisableTB(){
+    var other = document.getElementById("otherlan");
+    var otherlan = document.getElementById("otherlang");
+    otherlan.disabled = other.checked? false:true;
+    otherlan.value="";
+
+    if(!otherlan.disabled){
+        otherlan.focus();
+    }
+}
 
 form5.addEventListener('submit', function (e) {
     e.preventDefault();

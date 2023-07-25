@@ -675,7 +675,7 @@
 
 
 
-  input {
+  input,select {
     background-color: transparent;
     padding: 10px;
     border: 1px solid rgba(87, 87, 87, 0.295);
@@ -939,6 +939,14 @@
 
   .form-control.error textarea {
     border-color: var(--error-color);
+  }
+
+  .form-control.error select{
+    border-color: var(--error-color);
+  }
+
+  .form-control.success select{
+    border-color: var(--success-color);
   }
 
 
