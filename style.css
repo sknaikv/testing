@@ -30,7 +30,7 @@
     position: fixed;
     height: 100px;
     width: 100px;
-    display: flex;
+    /* display: flex; */
     top: 82%;
     /* float: right; */
     transform: translate(100%);
@@ -1126,6 +1126,10 @@
       border-bottom-right-radius: 6px;
     }
 
+    .topview{
+      left: 85%;
+    }
+
     .step-col {
       width: 90%;
       /* display: flex; */
@@ -1160,6 +1164,10 @@
 
     .form-content {
       height: 390vh;
+    }
+
+    .topview{
+      left: 82%;
     }
 
     #form4 {
@@ -1331,6 +1339,38 @@
     }
   }
 
+  @media screen and (min-width:550px) and (max-width:799px){
+    .topview{
+      left: 73%;
+    }
+  }
+
+  @media screen and (min-width:500px) and (max-width:550px){
+    .topview{
+      left: 70%;
+    }
+  }
+
+  @media screen and (min-width:400px) and (max-width:500px){
+    .topview{
+      left: 63%;
+    }
+  }
+
+  @media screen and (min-width:300px) and (max-width:400px){
+    .topview{
+      left: 60%;
+      margin-left: -10%;
+    }
+  }
+
+  @media screen and (min-width:200px) and (max-width:300px){
+    .topview{
+      left: 60%;
+      margin-left: -20%;
+    }
+  }
+
   @media screen and (min-width:800px) and (max-width:990px) {
     .left-nav {
       font-size: 10px;
@@ -1338,6 +1378,10 @@
       /* transform: translateX(50%); */
       position: relative;
       /* left: 20%; */
+    }
+
+    .topview{
+      left: 80%;
     }
 
 
