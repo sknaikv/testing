@@ -240,6 +240,19 @@ form1.addEventListener('submit', function (e) {
     checkcountry(country);
     checkcity(city);
 
+    
+
+
+    //email reinitiate
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(input.value.trim())) {
+        showsuccess(input);
+        return true;
+    } else {
+        showerror(input, 'Email is not Valid');
+        return false;
+    }
+
 
 
 })
@@ -419,20 +432,20 @@ form6.addEventListener('submit', function (e) {
 // })
 
 
-//hamburger
+//hamburger removed
 
-const hamburger = document.querySelector('.hamburger');
-const navmenu = document.querySelector('.center-nav>ul');
-const navbar = document.querySelector('.navbar');
-const centernav = document.querySelector('.center-nav');
-const leftnav = document.querySelector('.left-nav');
-const listnames = document.querySelector('.list-names');
+// const hamburger = document.querySelector('.hamburger');
+// const navmenu = document.querySelector('.center-nav>ul');
+// const navbar = document.querySelector('.navbar');
+// const centernav = document.querySelector('.center-nav');
+// const leftnav = document.querySelector('.left-nav');
+// const listnames = document.querySelector('.list-names');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navmenu.classList.toggle('active');
-    navbar.classList.toggle('active');
-    centernav.classList.toggle('active');
-    leftnav.classList.toggle('active');
-    listnames.classList.toggle('active');
-})
+// hamburger.addEventListener('click', () => {
+//     hamburger.classList.toggle('active');
+//     navmenu.classList.toggle('active');
+//     navbar.classList.toggle('active');
+//     centernav.classList.toggle('active');
+//     leftnav.classList.toggle('active');
+//     listnames.classList.toggle('active');
+// })
