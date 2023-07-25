@@ -265,7 +265,7 @@ form2.addEventListener('submit', function (e) {
     e.preventDefault();
     checkRequired([degree, passyear]);
     checkdegree(degree)
-    // checkdate(passyearid);
+    // checkdate(passyear);
 
 
 })
