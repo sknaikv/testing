@@ -127,7 +127,7 @@ function checkRequired(inputArr) {
             next1.onclick = function () {
                 form1.style.left = "-50%";
                 form2.style.left = "50%"
-                progress.style.width = "28%"
+                // progress.style.width = "28%"
                 window.scrollTo(100, 100)
             }
             return true;
@@ -146,7 +146,7 @@ function checkLength(input, min, max) {
         next1.onclick = function () {
             form1.style.left = "-50%";
             form2.style.left = "50%"
-            progress.style.width = "28%"
+            // progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
         return true;
@@ -162,7 +162,7 @@ function checkNumber(input) {
         next1.onclick = function () {
             form1.style.left = "-50%";
             form2.style.left = "50%"
-            progress.style.width = "28%"
+            // progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
         return true;
@@ -179,7 +179,7 @@ function checkWANumber(input) {
         next1.onclick = function () {
             form1.style.left = "-50%";
             form2.style.left = "50%"
-            progress.style.width = "28%"
+            // progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
         return true;
@@ -200,7 +200,7 @@ function checkcity(input) {
         next1.onclick = function () {
             form1.style.left = "-50%";
             form2.style.left = "50%"
-            progress.style.width = "28%"
+            // progress.style.width = "28%"
             window.scrollTo(100, 100)
         }
         return true;
@@ -267,7 +267,7 @@ function checkdegree(input) {
         next2.onclick = function () {
             form2.style.left = "-50%";
             form3.style.left = "50%"
-            progress.style.width = "50%"
+            // progress.style.width = "50%"
             window.scrollTo(100, 100)
         }
     } else {
@@ -281,7 +281,7 @@ form3.addEventListener('submit', function (e) {
     next3.onclick = function () {
         form3.style.left = "-50%";
         form4.style.left = "50%"
-        progress.style.width = "65%";
+        // progress.style.width = "65%";
         window.scrollTo(100, 100)
     }
 })
@@ -292,7 +292,7 @@ form4.addEventListener('submit', function (e) {
     next4.onclick = function () {
         form4.style.left = "-50%"
         form5.style.left = "50%"
-        progress.style.width = "76.5%"
+        // progress.style.width = "76.5%"
         window.scrollTo(100, 100)
     }
 
@@ -306,6 +306,17 @@ function enabledisableTB(){
 
     if(!otherlan.disabled){
         otherlan.focus();
+    }
+}
+
+function enabledisableTB2(){
+    var other2 = document.getElementById("otherlan2");
+    var otherlan2 = document.getElementById("otherlang2");
+    otherlan2.disabled = other2.checked? false:true;
+    otherlan2.value="";
+
+    if(!otherlan2.disabled){
+        otherlan2.focus();
     }
 }
 
@@ -323,7 +334,7 @@ function checkref(input) {
         next5.onclick = function () {
             form5.style.left = "-50%"
             form6.style.left = "50%"
-            progress.style.width = "88.5%"
+            // progress.style.width = "88.5%"
             window.scrollTo(100, 100)
         }
     } else {
@@ -341,7 +352,7 @@ function checkLengthref(input, min, max) {
         next5.onclick = function () {
             form5.style.left = "-50%"
             form6.style.left = "50%"
-            progress.style.width = "88.5%"
+            // progress.style.width = "88.5%"
             window.scrollTo(100, 100)
         }
     }

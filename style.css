@@ -26,7 +26,7 @@
   }
 
 
-  .topview{
+  .topview {
     position: fixed;
     height: 100px;
     width: 100px;
@@ -40,12 +40,12 @@
     opacity: 0;
   }
 
-  .topview.active{
+  .topview.active {
     opacity: 1;
     pointer-events: auto;
   }
 
-  .ri-arrow-up-line{
+  .ri-arrow-up-line {
     width: 100%;
     height: 100%;
     font-size: 50px;
@@ -56,7 +56,7 @@
 
   /* loader */
 
-  #loader-container{
+  #loader-container {
     background: #e3e3e3c7;
     height: 100%;
     width: 100%;
@@ -70,30 +70,30 @@
     animation: fade 0.8s;
   }
 
-  @keyframes fade{
-    100%{
+  @keyframes fade {
+    100% {
       opacity: 1;
     }
 
-    75%{
+    75% {
       opacity: 0.75;
     }
 
-    50%{
+    50% {
       opacity: 0.5;
     }
 
 
-    25%{
+    25% {
       opacity: 0.25;
     }
 
-    0%{
+    0% {
       opacity: 0;
     }
   }
 
-  #loader{
+  #loader {
     height: 150px;
     width: 150px;
     border: 3px solid #e3e3e3;
@@ -102,8 +102,8 @@
     animation: spin 1s ease infinite;
   }
 
-  @keyframes spin{
-    100%{
+  @keyframes spin {
+    100% {
       transform: rotate(360deg);
     }
   }
@@ -550,6 +550,7 @@
   }
 
 
+
   .cloud {
     position: absolute;
     background-color: rgb(104 92 135 / 18%);
@@ -624,9 +625,16 @@
     margin: auto;
   }
 
+  #form4>.monthofinternship {
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+  }
+
+  
   #form1 {
     position: absolute;
-    background-color: rgba(104, 92, 135, 0.068);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     /* -webkit-backdrop-filter: blur(5px); */
@@ -634,7 +642,8 @@
     margin-top: 20px;
     padding: 15px 20px;
     width: 90%;
-    height: 1100px;
+    height: max-content;
+    padding-bottom: 60px;
     border-radius: 5px;
     /* border: 2px solid rgba(80, 65, 165, 0.479); */
     box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
@@ -675,7 +684,8 @@
 
 
 
-  input,select {
+  input,
+  select {
     background-color: transparent;
     padding: 10px;
     border: 1px solid rgba(87, 87, 87, 0.295);
@@ -753,7 +763,7 @@
 
   #form2 {
     position: absolute;
-    background-color: rgba(104, 92, 135, 0.068);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     /* -webkit-backdrop-filter: blur(5px); */
@@ -761,7 +771,8 @@
     margin-top: 20px;
     padding: 70px 20px;
     width: 90%;
-    height: 40%;
+    height: max-content;
+    padding-bottom: 60px;
     border-radius: 5px;
     /* border: 2px solid rgba(80, 65, 165, 0.479); */
     box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
@@ -773,7 +784,7 @@
 
   #form3 {
     position: absolute;
-    background-color: rgba(104, 92, 135, 0.068);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     column-count: 3;
@@ -782,7 +793,8 @@
     margin-top: 20px;
     padding: 70px 20px;
     width: 90%;
-    height: 65%;
+    height: max-content;
+    padding-bottom: 60px;
     border-radius: 5px;
     /* border: 2px solid rgba(80, 65, 165, 0.479); */
     box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
@@ -794,7 +806,7 @@
 
   #form4 {
     position: absolute;
-    background-color: rgba(104, 92, 135, 0.068);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     column-count: 3;
@@ -803,7 +815,8 @@
     margin-top: 20px;
     padding: 70px 20px;
     width: 90%;
-    height: 98%;
+    height: max-content;
+    padding-bottom: 60px;
     border-radius: 5px;
     /* border: 2px solid rgba(80, 65, 165, 0.479); */
     box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
@@ -815,7 +828,7 @@
 
   #form5 {
     position: absolute;
-    background-color: rgba(104, 92, 135, 0.068);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     column-count: 3;
@@ -824,7 +837,8 @@
     margin-top: 20px;
     padding: 70px 20px;
     width: 90%;
-    height: 45%;
+    height: max-content;
+    padding-bottom: 60px;
     border-radius: 5px;
     /* border: 2px solid rgba(80, 65, 165, 0.479); */
     box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
@@ -836,7 +850,7 @@
 
   #form6 {
     position: absolute;
-    background-color: rgba(104, 92, 135, 0.068);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     column-count: 3;
@@ -845,7 +859,8 @@
     margin-top: 20px;
     padding: 70px 20px;
     width: 90%;
-    height: 40%;
+    height: max-content;
+    padding-bottom: 60px;
     border-radius: 5px;
     /* border: 2px solid rgba(80, 65, 165, 0.479); */
     box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
@@ -941,11 +956,11 @@
     border-color: var(--error-color);
   }
 
-  .form-control.error select{
+  .form-control.error select {
     border-color: var(--error-color);
   }
 
-  .form-control.success select{
+  .form-control.success select {
     border-color: var(--success-color);
   }
 
@@ -1091,8 +1106,15 @@
 
   @media screen and (min-width:1300px) and (max-width:1500px) {
     #form1 {
-      height: 240vh;
-      overflow-y: scroll;
+      height: max-content;
+      padding-bottom: 60px;
+      /* overflow-y: scroll; */
+    }
+
+    #form4>.monthofinternship {
+      display: flex;
+      align-items: center;
+      margin-top: -20px;
     }
 
     .form-content {
@@ -1118,6 +1140,12 @@
       width: 30%;
     }
 
+    #form4>.monthofinternship {
+      display: flex;
+      align-items: center;
+      margin-top: -20px;
+    }
+
     #progress::after {
       display: none;
     }
@@ -1134,7 +1162,7 @@
       border-bottom-right-radius: 6px;
     }
 
-    .topview{
+    .topview {
       left: 85%;
     }
 
@@ -1174,12 +1202,13 @@
       height: 390vh;
     }
 
-    .topview{
+    .topview {
       left: 82%;
     }
 
     #form4 {
-      width: 100%;
+      overflow: auto;
+      font-size: 0.65rem;
     }
 
     .navbar {
@@ -1187,16 +1216,22 @@
       /* transition: all 0.5s; */
     }
 
-    #progress::after{
+    #progress::after {
       display: none;
     }
 
-    .step-row{
+    .step-row {
       display: none;
     }
-    
-    #progress{
+
+    #progress {
       display: none;
+    }
+
+    #form4>.monthofinternship {
+      display: grid!important;
+      align-items: center;
+      margin-top: -20px;
     }
 
 
@@ -1310,70 +1345,70 @@
 
   }
 
-  @media screen and (min-width:200px) and (max-width:450px){
-    .left-nav>h3{
+  @media screen and (min-width:200px) and (max-width:450px) {
+    .left-nav>h3 {
       font-size: 12px;
       white-space: nowrap;
     }
 
-    .left-nav>h3>img{
+    .left-nav>h3>img {
       height: 8px;
     }
 
-    .nascom{
-      height:8px!important;
+    .nascom {
+      height: 8px !important;
     }
 
-    .left-nav>h3>span{
+    .left-nav>h3>span {
       font-size: 12px;
     }
 
-    .left-nav>.logo>a>img{
+    .left-nav>.logo>a>img {
       width: 40px;
       height: 40px;
     }
 
-    .hamburger{
+    .hamburger {
       margin-top: -20px;
       /* position: fixed; */
     }
-    
+
   }
 
   /* //surface 7 pro */
   @media screen and (width:912px) and (height:1368px) {
-    .hamburger{
+    .hamburger {
       margin-top: -85px;
     }
   }
 
-  @media screen and (min-width:550px) and (max-width:799px){
-    .topview{
+  @media screen and (min-width:550px) and (max-width:799px) {
+    .topview {
       left: 73%;
     }
   }
 
-  @media screen and (min-width:500px) and (max-width:550px){
-    .topview{
+  @media screen and (min-width:500px) and (max-width:550px) {
+    .topview {
       left: 70%;
     }
   }
 
-  @media screen and (min-width:400px) and (max-width:500px){
-    .topview{
+  @media screen and (min-width:400px) and (max-width:500px) {
+    .topview {
       left: 63%;
     }
   }
 
-  @media screen and (min-width:300px) and (max-width:400px){
-    .topview{
+  @media screen and (min-width:300px) and (max-width:400px) {
+    .topview {
       left: 60%;
       margin-left: -10%;
     }
   }
 
-  @media screen and (min-width:200px) and (max-width:300px){
-    .topview{
+  @media screen and (min-width:200px) and (max-width:300px) {
+    .topview {
       left: 60%;
       margin-left: -20%;
     }
@@ -1388,7 +1423,7 @@
       /* left: 20%; */
     }
 
-    .topview{
+    .topview {
       left: 80%;
     }
 
@@ -1460,27 +1495,33 @@
     }
 
     #form6 {
-      height: 70vh;
+      height: max-content;
+      padding-bottom: 60px;
     }
 
     #form5 {
-      height: 80vh;
+      height: max-content;
+      padding-bottom: 60px;
     }
 
     #form4 {
-      height: 340vh;
+      height: max-content;
+      padding-bottom: 60px;
     }
 
     #form3 {
-      height: 260vh;
+      height: max-content;
+      padding-bottom: 60px;
     }
 
     #form2 {
-      height: 60vh;
+      height: max-content;
+      padding-bottom: 60px;
     }
 
     #form1 {
-      height: 130vh;
+      height: max-content;
+      padding-bottom: 60px;
     }
 
     .btn-next {
@@ -1498,8 +1539,8 @@
     }
   }
 
-  @media screen and (min-width:800px) and (max-width:1100px){
-    #loader{
+  @media screen and (min-width:800px) and (max-width:1100px) {
+    #loader {
       width: 120px;
       height: 120px;
       border-radius: 3px solid #e3e3e3;
@@ -1508,14 +1549,15 @@
   }
 
 
-  @media screen and (min-width:100px) and (max-width:799px){
-    #loader{
+  @media screen and (min-width:100px) and (max-width:799px) {
+    #loader {
       width: 80px;
       height: 80px;
       border-radius: 3px solid #e3e3e3;
       border-right-color: #0a288b;
     }
   }
+
   /* 
   @media screen and (min-width:1264px) and (max-width:1000px){
     .navbar{
