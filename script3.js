@@ -8,7 +8,7 @@ const contact = document.getElementById('contact');
 const email = document.getElementById('email');
 const country = document.getElementById('country');
 const city = document.getElementById('city');
-const whatsappnumber = document.getElementById('whatsappnumber');
+// const whatsappnumber = document.getElementById('whatsappnumber');
 const male = document.getElementById('male');
 const female = document.getElementById('female');
 const other = document.getElementById('other');
@@ -18,7 +18,7 @@ const gender = document.getElementById('gender');
 //form2
 const form2 = document.getElementById("form2");
 const degree = document.getElementById('degree');
-const passdate = document.getElementById('passdate');
+const yearpicker = document.getElementById('yearpicker');
 
 
 //form5
@@ -48,7 +48,28 @@ var back3 = document.getElementById("back3")
 var back4 = document.getElementById("back4")
 var back5 = document.getElementById("back5")
 
-var progress = document.getElementById("progress")
+// var progress = document.getElementById("progress")
+
+
+
+//progress
+const progressText = document.querySelectorAll(".step p");
+const progressCheck = document.querySelectorAll(".step .check");
+const bullet = document.querySelectorAll(".step .bullet");
+let max = 6;
+let current = 1;
+
+
+
+
+// bullet[current - 1].classList.add("active");
+// bullet[current - 1].classList.add("active");
+// current += 1;
+
+
+
+
+
 
 
 
@@ -57,30 +78,45 @@ var progress = document.getElementById("progress")
 back1.onclick = function () {
     form2.style.left = "150%"
     form1.style.left = "50%"
-    progress.style.width = "13%"
+    bullet[current - 2].classList.remove("active");
+    progressCheck[current - 2].classList.remove("active");
+    progressText[current - 2].classList.remove("active");
+    current -= 1;
 
 }
 
 back2.onclick = function () {
     form3.style.left = "150%"
     form2.style.left = "50%"
-    progress.style.width = "28%"
+    bullet[current - 2].classList.remove("active");
+    progressCheck[current - 2].classList.remove("active");
+    progressText[current - 2].classList.remove("active");
+    current -= 1;
 }
 
 back3.onclick = function () {
     form4.style.left = "150%"
     form3.style.left = "50%"
-    progress.style.width = "50%"
+    bullet[current - 2].classList.remove("active");
+    progressCheck[current - 2].classList.remove("active");
+    progressText[current - 2].classList.remove("active");
+    current -= 1;
 }
 back4.onclick = function () {
     form5.style.left = "150%"
     form4.style.left = "50%"
-    progress.style.width = "65%"
+    bullet[current - 2].classList.remove("active");
+    progressCheck[current - 2].classList.remove("active");
+    progressText[current - 2].classList.remove("active");
+    current -= 1;
 }
 back5.onclick = function () {
     form6.style.left = "150%"
     form5.style.left = "50%"
-    progress.style.width = "76.5%"
+    bullet[current - 2].classList.remove("active");
+    progressCheck[current - 2].classList.remove("active");
+    progressText[current - 2].classList.remove("active");
+    current -= 1;
 }
 
 
@@ -109,12 +145,16 @@ function checkEmail(input) {
     if (re.test(input.value.trim())) {
         showsuccess(input);
         return true;
-    } else if(!re.test(input.value.trim())) {
+    } else if (!re.test(input.value.trim())) {
         showerror(input, 'Email is required');
-    }else{
+    } else {
         showerror(input, 'Email is required')
     }
 }
+
+// $(function(){
+//     $("#passdate").passdate({dateFormat: 'yy'});
+// })
 
 
 //check required
@@ -128,6 +168,10 @@ function checkRequired(inputArr) {
                 form1.style.left = "-50%";
                 form2.style.left = "50%"
                 // progress.style.width = "28%"
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
                 window.scrollTo(100, 100)
             }
             return true;
@@ -147,6 +191,10 @@ function checkLength(input, min, max) {
             form1.style.left = "-50%";
             form2.style.left = "50%"
             // progress.style.width = "28%"
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
             window.scrollTo(100, 100)
         }
         return true;
@@ -163,35 +211,73 @@ function checkNumber(input) {
             form1.style.left = "-50%";
             form2.style.left = "50%"
             // progress.style.width = "28%"
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
             window.scrollTo(100, 100)
         }
         return true;
+    } else if (input.value > 10) {
+        showerror(input, 'Enter a valid Contact number');
     } else {
-        showerror(input, 'Contact Number is required');
+        showerror(input, 'Contact number is required')
     }
 
 }
 
-function checkWANumber(input) {
-    var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-    if (re.test(input.value.trim())) {
-        showsuccess(input);
-        next1.onclick = function () {
-            form1.style.left = "-50%";
-            form2.style.left = "50%"
-            // progress.style.width = "28%"
-            window.scrollTo(100, 100)
-        }
-        return true;
-    } else {
-        showerror(input, 'WhatsApp Number is  required');
-    }
+// function checkWANumber(input) {
+//     var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+//     if (re.test(input.value.trim())) {
+//         showsuccess(input);
+//         next1.onclick = function () {
+//             form1.style.left = "-50%";
+//             form2.style.left = "50%"
+//             bullet[current - 1].classList.add("active");
+//             progressCheck[current - 1].classList.add("active");
+//             progressText[current - 1].classList.add("active");
+//             current += 1;
+//             window.scrollTo(100, 100)
+//         }
+//         return true;
+//     } else {
+//         showerror(input, 'WhatsApp Number is  required');
+//     }
 
-}
+// }
 
 function checkcountry() {
-    
+    var country = document.getElementById("country");
+    if (country.selectedIndex == 0) {
+        showerror(country, 'Country is required')
+    } else if (country.selectedIndex > 0) {
+        showerror(country, null)
+        document.getElementById("country").style.borderColor = "green"
+
+    } else {
+        showerror(country, 'Country is required')
+
+    }
+
+    // let countryops = document.getElementsByClassName('country-ops');
+
+    // for(let i=0;i<countryops.length;i++){
+    //     countryops[i].onclick = function(){
+    //         let target = document.body;
+    //         target.style.backgroundColor='green';
+
+    //     }
+    // }
 }
+
+// function resettored(){
+//     var resetbtn = document.getElementById('reset');
+//     if(resetbtn.clicked==true){
+//         showerror(input);
+//     }else{
+//         return false;
+//     }
+// }
 
 function checkcity(input) {
     var letters = /^[A-Za-z]+$/;
@@ -201,6 +287,10 @@ function checkcity(input) {
             form1.style.left = "-50%";
             form2.style.left = "50%"
             // progress.style.width = "28%"
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
             window.scrollTo(100, 100)
         }
         return true;
@@ -220,25 +310,31 @@ function getfieldName(input) {
 //form1 event listener
 form1.addEventListener('submit', function (e) {
     e.preventDefault();
-    checkRequired([firstname, lastname, contact, email, country, whatsappnumber, city]);
-    checkLength(firstname, 3, 15);
-    checkLength(lastname, 3, 15);
+    checkRequired([firstname, lastname, contact, email, country, city]);
+    checkLength(firstname, 1, 15);
+    checkLength(lastname, 1, 15);
     checkEmail(email);
     checkNumber(contact);
-    checkWANumber(whatsappnumber);
     checkcountry(country);
     checkcity(city);
 
-    
+
+    // function form1_error(){
+    //     const formcontrol = document.querySelector('.form-control');
+    //     if(formcontrol.classList.contains('error')){
+    //         console.log('form 1 contains errors')
+    //     }
+    // }
+
 
     //email reinitiate
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (re.test(input.value.trim())) {
         showsuccess(input);
         return true;
-    } else if(!re.test(input.value.trim())) {
+    } else if (!re.test(input.value.trim())) {
         showerror(input, 'Email is not Valid');
-    }else{
+    } else {
         showerror(input, 'Email is required')
     }
 
@@ -246,15 +342,22 @@ form1.addEventListener('submit', function (e) {
 
 })
 
+// if(form1.formcontrol.classList.contains("error")){
+//     form1.preventDefault();
+//     return false;
+// }
+
+
+
 
 
 //form2 event listener
 
 form2.addEventListener('submit', function (e) {
     e.preventDefault();
-    checkRequired([degree, passdate]);
+    checkRequired([degree, yearpicker]);
     checkdegree(degree)
-    // checkdate(passyear);
+    chkyearpicker(yearpicker);
 
 
 })
@@ -267,6 +370,10 @@ function checkdegree(input) {
         next2.onclick = function () {
             form2.style.left = "-50%";
             form3.style.left = "50%"
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
             // progress.style.width = "50%"
             window.scrollTo(100, 100)
         }
@@ -275,12 +382,37 @@ function checkdegree(input) {
     }
 }
 
+function chkyearpicker() {
+    var yearpicker = document.getElementById("yearpicker");
+    if (yearpicker.selectedIndex == 0) {
+        showerror(yearpicker, 'Pass year is required')
+    } else if (yearpicker.selectedIndex > 0) {
+        showerror(yearpicker, null)
+        document.getElementById("yearpicker").style.borderColor = "green"
+        
+    } else if(yearpicker.selectedIndex==null) {
+        showerror(yearpicker, 'Pass year is required')
+        document.getElementById("yearpicker").style.borderColor = "#BC383E"
+        
+    }else{
+        document.getElementById("yearpicker").style.borderColor = "#BC383E"
+
+    }
+
+}
+
+
+
 
 form3.addEventListener('submit', function (e) {
     e.preventDefault();
     next3.onclick = function () {
         form3.style.left = "-50%";
         form4.style.left = "50%"
+        bullet[current - 1].classList.add("active");
+        progressCheck[current - 1].classList.add("active");
+        progressText[current - 1].classList.add("active");
+        current += 1;
         // progress.style.width = "65%";
         window.scrollTo(100, 100)
     }
@@ -292,33 +424,91 @@ form4.addEventListener('submit', function (e) {
     next4.onclick = function () {
         form4.style.left = "-50%"
         form5.style.left = "50%"
+        bullet[current - 1].classList.add("active");
+        progressCheck[current - 1].classList.add("active");
+        progressText[current - 1].classList.add("active");
+        current += 1;
         // progress.style.width = "76.5%"
         window.scrollTo(100, 100)
     }
 
 })
 
-function enabledisableTB(){
+function enabledisableTB() {
     var other = document.getElementById("otherlan");
     var otherlan = document.getElementById("otherlang");
-    otherlan.disabled = other.checked? false:true;
-    otherlan.value="";
+    otherlan.disabled = other.checked ? false : true;
+    otherlan.value = "";
 
-    if(!otherlan.disabled){
+    if (!otherlan.disabled) {
         otherlan.focus();
     }
 }
 
-function enabledisableTB2(){
+function enabledisableTB2() {
     var other2 = document.getElementById("otherlan2");
     var otherlan2 = document.getElementById("otherlang2");
-    otherlan2.disabled = other2.checked? false:true;
-    otherlan2.value="";
+    otherlan2.disabled = other2.checked ? false : true;
+    otherlan2.value = "";
 
-    if(!otherlan2.disabled){
+    if (!otherlan2.disabled) {
         otherlan2.focus();
     }
 }
+
+
+
+// const smallgender = document.getElementById('small-gender');
+function selectedgender() {
+
+
+    if (document.getElementById('male').checked) {
+        document.getElementById('gender').style.borderColor = 'green';
+        document.getElementById('small-gender').style.display = "none";
+    } else if (document.getElementById('female').checked) {
+        document.getElementById('gender').style.borderColor = 'green';
+        document.getElementById('small-gender').style.display = "none";
+    } else if (document.getElementById('other').checked) {
+        document.getElementById('gender').style.borderColor = 'green';
+        document.getElementById('small-gender').style.display = "none";
+    } else {
+        document.getElementById('gender').style.borderColor = '#BC383E';
+        document.getElementById('small-gender').style.display = "inline";
+
+    }
+
+
+    let genderops = document.getElementsByName('genderr');
+
+    for (let i = 0; i < genderops.length; i++) {
+        genderops[i].onclick = function () {
+            let target = document.getElementById('gender');
+            let target2 = document.getElementById('small-gender');
+            target.style.borderColor = 'green';
+            target2.style.display = 'none';
+
+        }
+    }
+}
+
+
+// var selected = document.querySelector('input[name="gender"]:checked');
+// if (selected) {
+//     document.getElementById('gender').style.borderColor = 'green';
+//     smallgender.style.display="none";
+// } else if(document.getElementById('male').checked){
+//     document.getElementById('gender').style.borderColor = 'green';
+
+// }else if(document.getElementById('male').checked){
+//     document.getElementById('gender').style.borderColor = 'green';
+// }else if(document.getElementById('other').checked){
+//     document.getElementById('gender').style.borderColor = 'green';
+// }else{
+//     document.getElementById('gender').style.borderColor = '#BC383E';
+//     smallgender.style.display="inline";
+// }
+
+
 
 form5.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -334,10 +524,15 @@ function checkref(input) {
         next5.onclick = function () {
             form5.style.left = "-50%"
             form6.style.left = "50%"
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
             // progress.style.width = "88.5%"
             window.scrollTo(100, 100)
         }
     } else {
+        input.preventDefault();
         showerror(input, 'Reference is required');
     }
 }
@@ -345,13 +540,19 @@ function checkref(input) {
 function checkLengthref(input, min, max) {
     if (input.value.length < min) {
         showerror(input, `${getfieldName(input)} must be atleast  ${min} characters`);
+        input.preventDefault();
     } else if (input.value.length > max) {
         showerror(input, `${getfieldName(input)} must be less than ${max} characters`);
+        input.preventDefault();
     } else {
         showsuccess(input);
         next5.onclick = function () {
             form5.style.left = "-50%"
             form6.style.left = "50%"
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
             // progress.style.width = "88.5%"
             window.scrollTo(100, 100)
         }
@@ -371,17 +572,31 @@ form6.addEventListener('submit', function (e) {
                 setTimeout(function () {
                     alert("submitted successfully")
                     location.reload();
-                })
+                }, 1000)
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
             }
         } else if (!input.checked) {
-            submit.onclick = function(){
+            submit.onclick = function () {
                 e.preventDefault();
                 fieldset.style.borderColor = '#BC383E';
+                // progressCheck[current - 1].classList.remove("active");
+                // progressText[current - 1].classList.remove("active");
+                bullet[current - 1].classList.remove("active");
+
             }
             fieldset.style.borderColor = '#BC383E';
-        }else{
+            // progressCheck[current - 1].classList.remove("active");
+            // progressText[current - 1].classList.remove("active");
+            bullet[current - 1].classList.remove("active");
+        } else {
             e.preventDefault();
             fieldset.style.borderColor = '#BC383E';
+            // progressCheck[current - 1].classList.remove("active");
+            // progressText[current - 1].classList.remove("active");
+            bullet[current - 1].classList.remove("active");
         }
 
         tnc.addEventListener('change', () => {
@@ -389,25 +604,38 @@ form6.addEventListener('submit', function (e) {
             checktnc(input)
             if (input.checked) {
                 fieldset.style.borderColor = 'green';
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
                 submit.onclick = function () {
                     setTimeout(function () {
-                        alert("submitted successfully")
-                        location.reload();
+                        bullet[current - 1].classList.add("active");
+                        progressCheck[current - 1].classList.add("active");
+                        progressText[current - 1].classList.add("active");
+                        current += 1;
                     })
                 }
             } else if (!input.checked) {
-                submit.onclick = function(){
+                submit.onclick = function () {
                     e.preventDefault();
                     fieldset.style.borderColor = '#BC383E';
+                    // progressCheck[current - 1].classList.remove("active");
+                    // progressText[current - 1].classList.remove("active");
+                    bullet[current - 1].classList.remove("active");
                 }
                 fieldset.style.borderColor = '#BC383E';
-            }else{
+                // progressCheck[current - 1].classList.remove("active");
+                // progressText[current - 1].classList.remove("active");
+                bullet[current - 1].classList.remove("active");
+            } else {
                 e.preventDefault();
                 fieldset.style.borderColor = '#BC383E';
             }
 
 
         })
+        bullet[current - 1].classList.remove("active");
         // fieldset.style.borderColor = '#BC383E';
     }
 
@@ -418,10 +646,10 @@ form6.addEventListener('submit', function (e) {
 //topview
 
 const topview = document.querySelector(".topview");
-window.addEventListener("scroll",()=>{
-    if(window.scrollY > 300){
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
         topview.classList.add("active");
-    }else{
+    } else {
         topview.classList.remove("active");
     }
 })
